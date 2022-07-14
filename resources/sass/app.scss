@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-7xl;
+  }
+
+  .form {
+    &-group {
+      //@apply mb-4;
+    }
+
+    &-control {
+      @apply block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+    }
+  }
+
+  // Button
+  .btn,
+  button {
+    &:disabled,
+    &[disabled] {
+      @apply opacity-50 cursor-not-allowed;
+    }
+  }
+
+  // Checkbox
+  .checkbox {
+    @apply flex items-center cursor-pointer;
+
+    input[type='radio'] {
+      @apply w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600;
+    }
+    label {
+      @apply block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 cursor-pointer;
+    }
+  }
+}
+
+@layer utilities {
+  .select-input {
+    @apply block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+  }
+
+  .select-control {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+  }
+}
+
+body {
+  @apply bg-gray-100;
+}
